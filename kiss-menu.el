@@ -55,6 +55,13 @@ Other commands are inherited from `tabulated-list-mode'."
   (interactive)
   (switch-to-buffer (kiss-menu-list)))
 
+(defun list-kiss-packages ()
+  "Switch to the Kiss Menu of installed packages.
+
+Refer to `kiss-menu' for more details."
+  (interactive)
+  (switch-to-buffer (kiss-menu-list)))
+
 (defun kiss-menu-list ()
   "Create and return a kiss menu buffer."
   (let ((buffer (get-buffer-create "*Kiss Menu*")))
