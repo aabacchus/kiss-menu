@@ -25,18 +25,18 @@
 (defvar kiss-menu-marker "#"
   "The mark string (one character) for marked packages.")
 
-(define-derived-mode kiss-menu-mode tabulated-list-mode "Kiss Menu"
-  "Major mode for Kiss Menu buffers.
-Invoke with \\[kiss-menu]."
-  ;; :group 'kiss-menu
-  (add-hook 'tabulated-list-revert-hook 'kiss-menu--refresh nil t))
-
 (defvar-keymap kiss-menu-mode-map
   :doc "Local keymap for `kiss-menu-mode' buffers."
   :parent tabulated-list-mode-map
   "m" #'kiss-menu-mark
   "u" #'kiss-menu-unmark
   "U" #'kiss-menu-unmark-all)
+
+(define-derived-mode kiss-menu-mode tabulated-list-mode "Kiss Menu"
+  "Major mode for Kiss Menu buffers.
+Invoke with \\[kiss-menu]."
+  ;; :group 'kiss-menu
+  (add-hook 'tabulated-list-revert-hook 'kiss-menu--refresh nil t))
 
 (defun kiss-menu ()
   "Switch to the Kiss Menu.
