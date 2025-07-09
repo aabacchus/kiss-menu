@@ -163,4 +163,5 @@ For example, to be used for (`kiss-remove' (kiss-menu-marked-pkgs))."
       (push (kiss-menu-pkg) pkgs))
     (nreverse pkgs)))
 
+(provide 'kiss-menu)
 ;;; kiss-menu.el ends here.
