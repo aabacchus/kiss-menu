@@ -1,7 +1,7 @@
 ;;; kiss-menu.el --- Show a menu of installed KISS packages -*- lexical-binding: t -*-
 
 ;; Author: phoebos
-;; Version: 0.1
+;; Version: 0.2
 
 ;;; Commentary:
 
@@ -113,7 +113,7 @@ Refer to `kiss-menu' for more details."
 	 (list p
 	       (vector ""
 		       update-char
-		       p
+		       (list p)
 		       v))
 	 entries)))
     (setq plen (max plen (- (window-max-chars-per-line) 1 2 1 vlen)))
