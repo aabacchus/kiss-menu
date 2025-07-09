@@ -112,18 +112,16 @@ Refer to `kiss-menu' for more details."
 	(push
 	 (list p
 	       (vector ""
-		       "I"
 		       update-char
 		       p
 		       v))
 	 entries)))
-    (setq plen (max plen (- (window-max-chars-per-line) 1 1 2 1 vlen)))
+    (setq plen (max plen (- (window-max-chars-per-line) 1 2 1 vlen)))
     (message "kiss-menu: found %d packages" (length pkgs))
     (setq tabulated-list-format
 	  (vector
 	   ;; NAME WIDTH SORT . PROPS
 	   '(nil 1 t :pad-right 0)
-	   '("I" 1 t :pad-right 0)
 	   '("U" 1 t)
 	   `("Package" ,plen t)
 	   `("Version" ,vlen t)))
