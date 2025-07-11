@@ -121,7 +121,7 @@ Refer to `kiss-menu' for more details."
     (setq tabulated-list-format
 	  (vector
 	   ;; NAME WIDTH SORT . PROPS
-	   '(nil 1 t :pad-right 0)
+	   '("m" 1 t :pad-right 0)
 	   '("U" 1 t)
 	   `("Package" ,plen t)
 	   `("Version" ,vlen t)))
