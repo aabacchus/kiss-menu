@@ -3,6 +3,10 @@
 An Emacs major mode to view and manage lists of KISS packages.
 Uses [[https://github.com/ehawkvu/kiss.el][kiss.el]].
 
+** Screenshot
+
+[[./screenshot.png]]
+
 ** Setup
 
 I'm not totally sure how to do this properly.
